@@ -1,0 +1,501 @@
+/* =============================
+    Global Styles & Reset
+============================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f9;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+/* =============================
+    Header Styles
+============================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f3542;
+    padding: 15px 25px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.company-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* =============================
+    Profile View Section
+============================= */
+.profile-view {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.profile-view:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.profile-view a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.image-container {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.image-container svg {
+    width: 28px;
+    height: 28px;
+    color: inherit;
+}
+
+.text-container {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* =============================
+    Main Content
+============================= */
+main.container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.back-button {
+    display: inline-flex; /* better alignment */
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background-color: #2f3542;
+    color: white; /* this controls the arrow color */
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    gap: 12px;
+    transition: background 0.3s;
+}
+
+
+.back-button:hover {
+    background:#3d4453;
+    color:#e0e1e4;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    color: #2f3542;
+}
+
+.summary {
+    margin-bottom: 20px;
+}
+
+.summary p {
+    margin-bottom: 5px;
+}
+
+.total-count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2ed573;
+}
+
+.list-button {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.list-button:hover {
+    opacity: 0.9;
+}
+
+/* =============================
+    Table Styles
+============================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px 18px;
+    text-align: left;
+    border-bottom: 1px solid #ececec;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* adjust spacing if needed */
+}
+
+
+
+.analytics-label {
+    padding-left: 10px;
+    margin: 0; /* remove default h2 margin */
+}
+
+
+/*//////////////////////////////////*/
+
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .styled-select {
+    padding: 8px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    background: linear-gradient(to bottom, #ffffff, #e9e9e9);
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.8),
+                inset -1px -1px 2px rgba(0, 0, 0, 0.1),
+                2px 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    appearance: none;
+  }
+  
+  .custom-multiselect {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+  
+  .dropdown-menu label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+
+  .select-toggle-btn {
+    padding: 6px 10px;
+    font-size: 16px;
+    border: 1.5px solid #ccc;
+    background: linear-gradient(to bottom, #ffffff, #e9e9e9);
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.8),
+                inset -1px -1px 2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+}
+
+/* Add this to your existing CSS - it won't affect other elements */
+.custom-multiselect:hover .dropdown-menu {
+    display: block;
+}
+
+/* This ensures the dropdown stays visible when hovering over it */
+.dropdown-menu:hover {
+    display: block !important;
+}
+
+
+/* Clearances sections styling */
+.container2 {
+    display: flex;
+    gap: 25px; /* Adjust this value as needed for spacing between elements */
+}
+
+.registration-section,
+.clearance-section,
+.business-clearance-section {
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+
+    /* 3D box shadow */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+                -2px -2px 5px rgba(255, 255, 255, 0.6);
+    border: 1px solid #ccc;
+}
+
+
+
+/*SEARCH CSS////////////////*/
+
+.search-bar {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar form {
+    display: flex;
+    gap: 8px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    width: 500px;
+    border: 3px solid #000000;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.search-bar button {
+    padding: 8px 16px;
+    background-color: #2f3542;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #3d4453;
+}
+
+.second-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns top edges */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Left column (filters + search) */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Takes remaining width */
+}
+
+/* Search bar style */
+.search-bar form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Right column (stats container) */
+.container2 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping to new lines when screen is small */
+    flex: 1;
+}
+
+
+
+/* Container layout */
+.pagination-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+    margin-top: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Pagination info text */
+.pagination-info {
+    flex: 1 1 100%;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Pagination controls */
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Page number buttons */
+.page-numbers {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.page-btn {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.page-btn:hover {
+    background-color: #e9e9e9;
+}
+
+.page-btn.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+    font-weight: bold;
+}
+
+/* Prev/Next buttons */
+.pagination-btn {
+    padding: 6px 12px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: #ddd;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Records per page */
+.records-per-page {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* spacing between analytics and profile */
+}   
+
+.analyticsP{
+     
+    margin-top: auto
+}
+
+.analytics {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.analytics:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.text-container {
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+
+@media screen and (orientation: portrait) {
+    .second-group {
+      flex-direction: column;
+    }
+  
+    .container2 {
+      width: 100%;
+    }
+    
+  }
+  

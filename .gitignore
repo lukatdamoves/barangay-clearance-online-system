@@ -1,0 +1,58 @@
+# ============================================================
+#  Barangay Clearance Online System
+# ============================================================
+
+# ---- Composer dependencies (reinstall with `composer install`) ----
+/brgy_santo_cristo/vendor/
+brgy_santo_cristo/vendor/
+composer.phar
+
+# ---- Resident uploads (valid IDs, applicant photos, permits) ----
+# These are real people's personal documents. NEVER commit them.
+/brgy_santo_cristo/uploads/*
+!/brgy_santo_cristo/uploads/.htaccess
+!/brgy_santo_cristo/uploads/image.php
+
+# ---- Generated DOCX output (created at runtime) ----
+/brgy_santo_cristo/output_docx/*
+!/brgy_santo_cristo/output_docx/.gitkeep
+
+# ---- Secrets / local config ----
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+id_rsa*
+
+# ---- Database dumps (use database/schema.sql instead) ----
+*.sql
+!database/schema.sql
+*.sql.gz
+*.dump
+
+# ---- Logs & temp ----
+*.log
+logs/
+tmp/
+cache/
+.phpunit.result.cache
+
+# ---- Generated PDFs ----
+*.pdf
+
+# ---- Editor / OS junk ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ---- Node (in case tooling is added later) ----
+node_modules/
+npm-debug.log*
+yarn-error.log*

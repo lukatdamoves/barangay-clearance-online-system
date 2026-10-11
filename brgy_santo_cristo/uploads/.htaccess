@@ -1,0 +1,9 @@
+# Deny direct access to image files
+<FilesMatch "\.(jpg|jpeg|png|gif|pdf)$">
+    Deny from all
+</FilesMatch>
+
+# Allow access to image.php
+<Files "image.php">
+    Allow from all
+</Files>
